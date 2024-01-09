@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "baseHref": "/neonodes/dist/neonodes/browser/",
             "outputPath": "dist/neonodes",
             "index": "src/index.html",
             "browser": "src/main.ts",
