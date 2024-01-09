@@ -1,0 +1,41 @@
+.input-container {
+       position: relative;
+       left: 0;
+       width: 100%;
+       height: 30px;
+       background-color: rgba(0, 0, 0, 0);
+}
+
+     .input-select, .input-option, .input-treatment, .input-other, .select-option {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        color: yellow !important;
+        background-color: rgba(0, 0, 0, 0.65);
+      }
+     .input-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+      }
+      .helper-box {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 5;
+        transition: opacity 0.5s ease-in-out;
+        background-color: rgba(0,0,0,0);
+        opacity: 0.65;
+        width: 100%;
+        font-size: medium;
+      }
+      .helper-box.faded {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+

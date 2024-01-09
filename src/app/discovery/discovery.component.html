@@ -10,23 +10,20 @@
 <div>{{ clusterStatus }}</div>
 
 <h2>Node Operations</h2>
-<form (ngSubmit)="registerNode(nodeName.value, nodeIp.value)">
-  <label for="nodeName">Node Name:</label>
+<form>
+<div>
+  <label class="label-text" for="nodeName">Node Name:</label>
   <input type="text" id="nodeName" required>
+</div>
   
-  <label for="nodeIp">Node IP:</label>
+<div>
+  <label class="label-text" for="nodeIp">Node IP:</label>
   <input type="text" id="nodeIp" required>
+</div>
 
-  <button type="submit">Register Node</button>
-</form>
-
-<form (ngSubmit)="deregisterNode(nodeName.value, nodeIp.value)">
-  <label for="nodeName">Node Name:</label>
-  <input type="text" id="nodeName" required>
-  
-  <label for="nodeIp">Node IP:</label>
-  <input type="text" id="nodeIp" required>
-
-  <button type="submit">Deregister Node</button>
+<div>
+  <button type="submit" (click)="registerNode(nodeName.value, nodeIp.value)">Register</button>
+  <button type="submit" (click)="deregisterNode(nodeName.value, nodeIp.value)">Deregister</button>
+</div>
 </form>
 <p>discovery works!</p>
