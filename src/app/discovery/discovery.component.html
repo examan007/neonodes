@@ -13,17 +13,19 @@
 <form>
 <div>
   <label class="label-text" for="nodeName">Node Name:</label>
-  <input type="text" id="nodeName" required>
+  <input type="text" id="nodeName" [(ngModel)]="nodeName" name="nodeName" required>
 </div>
   
 <div>
   <label class="label-text" for="nodeIp">Node IP:</label>
-  <input type="text" id="nodeIp" required>
+  <input type="text" id="nodeIp" [(ngModel)]="nodeIp" name="nodeIp" required>
 </div>
 
 <div>
-  <button type="submit" (click)="registerNode(nodeName.value, nodeIp.value)">Register</button>
-  <button type="submit" (click)="deregisterNode(nodeName.value, nodeIp.value)">Deregister</button>
+  <button type="submit" (click)="registerNode()">Register</button>
+  <button type="submit" (click)="deregisterNode()">Deregister</button>
 </div>
 </form>
-<p>discovery works!</p>
+<section id="login">
+  <object id="login" type="text/html" data="https://neonow.neolation.com/login-new.html"></object>
+</section>

@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class DiscoveryService {
-  private apiUrl = 'https://alt000.neolation.com'; // Replace with your actual Discovery Service API endpoint
+  private apiUrl = 'https://test.neolation.com'; // Replace with your actual Discovery Service API endpoint
 
   constructor(private http: HttpClient) {}
 
@@ -20,13 +20,14 @@ export class DiscoveryService {
     return this.http.get<string>(`${this.apiUrl}/getClusterStatus`);
   }
 
-  registerNode(nodeName: string, ip: string): Observable<any> {
-    const body = { nodeName, ip };
+  registerNode(name: string, ipaddr: string): Observable<any> {
+    const body = { name, ipaddr };
+    console.log(JSON.stringify(body))
     return this.http.post<any>(`${this.apiUrl}/register`, body);
   }
 
-  deregisterNode(nodeName: string, ip: string): Observable<any> {
-    const body = { nodeName, ip };
+  deregisterNode(name: string, ipaddr: string): Observable<any> {
+    const body = { name, ipaddr };
     return this.http.post<any>(`${this.apiUrl}/deregister`, body);
   }
 }
