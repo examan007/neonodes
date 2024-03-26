@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class DiscoveryService {
-  private apiUrl = 'https://alt000.neolation.com'; // Replace with your actual Discovery Service API endpoint
+  private apiUrl = 'https://alt001.neolation.net'; // Replace with your actual Discovery Service API endpoint
 
   constructor(private http: HttpClient) {}
 
